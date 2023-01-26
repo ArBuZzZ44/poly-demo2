@@ -33,3 +33,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+public/system/dragonfly/development/2023/01/27/11hwd690zr__.png.meta.yml
+public/system/dragonfly/development/2023/01/27/11hwd690zr__.png
+.gitignore
