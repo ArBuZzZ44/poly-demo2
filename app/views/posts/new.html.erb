@@ -1,5 +1,16 @@
 <h1>New post:</h1>
 <%= form_for :post, url: posts_path, data: {turbo: false} do |f| %>
+	<% if @post && @post.errors.any? %>
+		<div style="color: red">
+			<p>
+				<ul>
+					<% @post.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</p>
+		</div>
+	<% end %>
 	<p>
 		<%= f.label :content %><br />
 		<%= f.text_area :content %>
