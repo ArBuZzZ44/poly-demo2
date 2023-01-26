@@ -1,0 +1,13 @@
+<%= form_for :image, url: images_path, data: {turbo: false} do |f| %>
+	<div>
+  		<%= f.label :title %><br />
+  		<%= f.text_field :title %>
+  	</div>
+  	<div>
+  		<br /><%= f.label :image %><br />
+  		<%= f.file_field :image %>
+  	</div>
+  	<div>
+  		<br /><%= f.submit :submit %>
+  	</div>
+<% end %>
