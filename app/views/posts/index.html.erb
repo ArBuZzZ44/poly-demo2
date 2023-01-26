@@ -1,1 +1,15 @@
-<h1>Hello</h1>
+<h1>Hello, all posts are published here</h1>
+<br />
+<% @posts.each do |post| %>
+	<p>
+		<%= post.content %>
+		<br />
+		<br />
+		<span style="font-size: 75%; color: #999;">Added at <%= post.created_at %></span>
+	</p>
+	<p>
+		<%= link_to 'Show', post_path(post) %> | 
+		<%= link_to 'Edit', edit_post_path(post) %> |
+		<%= button_to 'Delete', post_path(post), method: :delete, data: {'turbo-confirm': 'Are you sure?'} %>
+	</p>
+<% end %>
