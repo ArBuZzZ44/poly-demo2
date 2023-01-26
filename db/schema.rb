@@ -21,7 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_25_063552) do
   end
 
   create_table "images", force: :cascade do |t|
-    t.string "url"
+    t.string "image_uid"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
